@@ -1,0 +1,43 @@
+<Html>
+    <Head>
+        <Title> User login </Title>
+        
+        <style>
+            form{
+                font-size: 30px;
+                margin-top: 100;
+                margin-left: 400;
+            }
+        </style>
+
+        <script type="text/javascript">
+            function validate()
+            {
+                if(document.userform.name.value == "")
+                {
+                    alert("Please enter your name!");
+                    return false;
+                }
+
+                if(document.userform.password.value == "")
+                {
+                    alert("Please enter your password!");
+                    password.focus();
+                    return false;
+                }
+            }
+        </script>
+    </Head>
+    <Body>
+    <form name="userform" onsubmit="return validate()" action="Logged in successfully.html">
+        <label for="name"> Name: </label>
+        <input type="text" id="name" name="Name" style="height: 25; width: 300;"> <br>
+        <label for="password"> Password: </label>
+        <input type="password" id="password" name="Password" style="height: 25; 
+        width: 260;"> <br> <br>
+        <input type="submit" name="submit" value="Log in" style="height: 25;
+        width: 100; margin-left: 50;">
+        <a href="Registered.html" style="font-size: 20;"> Click here to register</a>
+    </form>
+    </Body>
+</Html>
